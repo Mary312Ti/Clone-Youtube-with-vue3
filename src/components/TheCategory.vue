@@ -1,0 +1,41 @@
+<template>
+  <section class="flex fixed bg-white w-screen md:ml-24 xl:ml-64 xs:top-14 z-20 pl-4">
+    <div class="max-w-screen-2xl m-auto">
+      <div class="text-sm py-5 pl-4 bg-white flex space-x-3 overflow-auto whitespace-nowrap">
+       <CategoryItem
+       v-for="category in categories" :key="category" :category="category" :isActive="category === 'All'" />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+
+import CategoryItem from './CategoryItem.vue';
+
+const components = {
+  CategoryItem,
+}
+
+const categories = [
+  'All',
+  'Music',
+  'Playlists',
+  'Live',
+  'Gaming',
+  'Television comedy',
+  'Test drives',
+  'Animated films',
+  'History',
+  'Cars',
+  'Home improvement',
+  'Conversation',
+  'Pop music',
+  'Strategy video games',
+  'Role-Playing Games',
+  'Reently uploaded',
+
+]
+
+defineExpose({ categories, components })
+</script>
