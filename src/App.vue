@@ -8,10 +8,10 @@
 </template>
 
 <script setup>
-import TheHeader from './components/TheHeader.vue';
-import TheSidebarSmall from './components/TheSidebarSmall.vue';
-import TheSidebarBig from './components/TheSidebarBig.vue';
-import TheSidebarMobile from './components/TheSidebarMobile.vue';
+import TheHeader from './components/Header/TheHeader.vue';
+import TheSidebarSmall from './components/Sidebar/TheSidebarSmall.vue';
+import TheSidebarBig from './components/Sidebar/TheSidebarBig.vue';
+import TheSidebarMobile from './components/Sidebar/TheSidebarMobile.vue';
 import TheCategory from './components/TheCategory.vue';
 import TheVideoMain from './components/TheVideoMain.vue';
 

@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { computed,defineProps } from '@vue/reactivity';
+import { computed, } from '@vue/reactivity';
 
 
 const props = defineProps({
@@ -19,12 +19,12 @@ const props = defineProps({
 
 const classes = computed(() => {
     const baseClasses = ['px-3', 'py-1', 'transition', 'rounded-full', 'border']
-    const activeClasses = ['border-gray-700', 'bg-gray-600', 'hover:bg-gray-500', 'text-white']
+    const activeClasses = ['border-black', 'bg-black', 'text-white']
     const inactiveClasses = ['border-gray-300', 'bg-gray-100', 'hover:bg-gray-200']
 
     return [
     ...baseClasses,
-    (isActive.value ? activeClasses : inactiveClasses)
+    (props.isActive ? activeClasses : inactiveClasses)
   ]
 })
 
