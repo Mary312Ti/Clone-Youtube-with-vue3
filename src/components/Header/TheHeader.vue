@@ -2,19 +2,18 @@
     <header class="flex justify-between bg-white sticky top-0 z-50">
         <div class="lg:w-1/4 xl:w-64 flex">
             <div class="flex items-center pl-4">
-                <BaseIcon name="menu"></BaseIcon>
-                <!-- <button class="pl-2 pr-6">
+                <button class="pl-2 pr-6">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-                </button> -->
+                </button>
                 <LogoMain />
             </div>
         </div>
         <div class="hidden p-2.5 sm:flex flex-1 gap-2 justify-end pl-8 md:pl-12 md:px-8 lg:px-0 items-center lg:w-1/2">
-           <TheSearch />
+            <TheSearch />
             <button class="ml-4 hidden sm:flex focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                     <path d="M8.25 4.5a3.75 3.75 0 117.5 0v8.25a3.75 3.75 0 11-7.5 0V4.5z" />
@@ -49,16 +48,14 @@ import TheDropdown from '../TheDropdown.vue';
 import LogoMain from './LogoMain.vue';
 import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
-import BaseIcon from '../Base/BaseIcon.vue'
 
 const components = {
     TheDropdown,
     LogoMain,
     TheSearch,
     LoginButton,
-    BaseIcon
 }
 
 
-defineExpose ({ components })
+defineExpose({ components })
 </script>
