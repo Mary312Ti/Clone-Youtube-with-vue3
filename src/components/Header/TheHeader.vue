@@ -3,11 +3,12 @@
         <div class="lg:w-1/4 xl:w-64 flex">
             <div class="flex items-center pl-4">
                 <button class="pl-2 pr-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    <BaseIcon name="menu"></BaseIcon>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                    </svg> -->
                 </button>
                 <LogoMain />
             </div>
@@ -48,12 +49,14 @@ import TheDropdown from '../TheDropdown.vue';
 import LogoMain from './LogoMain.vue';
 import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
+import BaseIcon from '../Base/BaseIcon.vue';
 
 const components = {
     TheDropdown,
     LogoMain,
     TheSearch,
     LoginButton,
+    BaseIcon
 }
 
 
