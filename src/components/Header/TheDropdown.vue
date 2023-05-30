@@ -3,7 +3,9 @@
         class="z-50 visible opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-56 rounded-md">
         <section class="py-2 border-b">
             <ul>
-                <li>
+                <dropdownList name="dataIcon" label="Your data in youtube">
+                </dropdownList>
+                <!-- <li>
                     <a href="#" class="flex items-center px-3 py-2 text-sm hover:bg-gray-100">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-gray-600">
@@ -13,7 +15,7 @@
 
                         <span class="pl-2">Your data in youtube</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </section>
         <section class="py-2 border-b">
@@ -118,3 +120,10 @@
         </section>
     </div>
 </template>
+
+<script setup>
+import dropdownList from './dropdownList.vue';
+
+
+
+</script>
