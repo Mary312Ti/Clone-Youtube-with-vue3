@@ -25,7 +25,7 @@
             <!-- dots-menu -->
             <button class="relative group p-2 focus:outline-none">
                 <BaseIcon name="dotsSettings" fill-color="none" stroke-color="currentColor"></BaseIcon>
-                <TheDropdown />
+                <TheDropdown/>
             </button>
             <LoginButton />
         </div>
@@ -38,14 +38,4 @@ import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
 import BaseIcon from '../Base/BaseIcon.vue';
 
-// const components = {
-//     TheDropdown,
-//     LogoMain,
-//     TheSearch,
-//     LoginButton,
-//     BaseIcon
-// }
-
-
-// defineExpose({ components })
 </script>

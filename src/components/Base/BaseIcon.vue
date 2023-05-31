@@ -11,7 +11,8 @@ import { ref } from 'vue';
 const props = defineProps({
     name: { type: String, required: true },
     strokeColor: { type: String, default: "currentColor", required: true },
-    fillColor: { type: String, default: "none", required: true }
+    fillColor: { type: String, default: "none", required: true },
+
 });
 const path = ref(icons[props.name]);
 </script>
