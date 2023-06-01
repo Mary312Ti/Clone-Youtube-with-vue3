@@ -13,9 +13,6 @@
 
 import CategoryItem from './CategoryItem.vue';
 
-const components = {
-  CategoryItem,
-}
 
 const categories = [
   'All',
@@ -37,5 +34,5 @@ const categories = [
 
 ]
 
-defineExpose({ categories, components })
+defineExpose({ categories })
 </script>
