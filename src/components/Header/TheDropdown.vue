@@ -18,13 +18,13 @@
         </section>
         <section class="border-b">
             <ul>
-                <dropdownList name="settingsIcon" label="Settings" fill-color="none" stroke-color="currentColor">
+                <dropdownList name="settingsIcon" label="Settings" fill-color="currentColor" stroke-color="none">
                 </dropdownList>
             </ul>
             <section class="py-2 border border-t">
                 <ul>
-                    <dropdownList name="helpIcon" label="Help" fill-color="none" stroke-color="currentColor"></dropdownList>
-                    <dropdownList name="feedbackIcon" label="Send feedback" fill-color="none" stroke-color="currentColor">
+                    <dropdownList name="helpIcon" label="Help" fill-color="currentColor" stroke-color="none"></dropdownList>
+                    <dropdownList name="feedbackIcon" label="Send feedback" fill-color="currentColor" stroke-color="none">
                     </dropdownList>
                 </ul>
             </section>
