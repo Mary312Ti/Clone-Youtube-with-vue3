@@ -2,7 +2,7 @@
     <header class="flex justify-between bg-white sticky top-0 z-50">
         <div class="lg:w-1/4 xl:w-64 flex">
             <div class="flex items-center pl-4">
-                <button class="pl-2 pr-6">
+                <button class="pl-2 pr-6 hidden sm:block">
                     <BaseIcon name="menu" strokeColor="currentColor" fillColor="none"></BaseIcon>
                 </button>
                 <LogoMain />

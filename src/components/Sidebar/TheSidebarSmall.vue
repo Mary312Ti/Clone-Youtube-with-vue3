@@ -1,5 +1,5 @@
 <template>
-    <aside class="hidden md:block xl:hidden max-h-screen overflow-hidden fixed">
+    <aside class="hidden md:block xl:hidden max-h-screen overflow-hidden fixed bg-white">
       <section class="">
         <ul>
           <!---->
@@ -82,3 +82,6 @@
       </section>
     </aside>
 </template>
+
+<script setup>
+</script>

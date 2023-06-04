@@ -2,26 +2,27 @@
   <TheHeader />
   <TheSidebarSmall />
   <TheSidebarBig />
-  <TheSidebarMobile />
   <TheCategory />
   <TheVideoMain />
+  <MobileMenu/>
 </template>
 
 <script setup>
 import TheHeader from './components/Header/TheHeader.vue';
 import TheSidebarSmall from './components/Sidebar/TheSidebarSmall.vue';
 import TheSidebarBig from './components/Sidebar/TheSidebarBig.vue';
-import TheSidebarMobile from './components/Sidebar/TheSidebarMobile.vue';
 import TheCategory from './components/TheCategory.vue';
 import TheVideoMain from './components/TheVideoMain.vue';
+import MobileMenu from './components/Sidebar/MobileMenu.vue';
 
 const components = {
   TheHeader,
   TheSidebarSmall,
   TheSidebarBig,
-  TheSidebarMobile,
   TheCategory,
   TheVideoMain,
+  MobileMenu
+
 }
 
 //экспорт по умолчанию находится внутри блока <script setup>
@@ -30,8 +31,9 @@ const components = {
 //при использовании этого синтаксиса экспортировать компоненты 
 //нужно не через export default, а через опцию defineExpose
 
-
 defineExpose({ components })
 </script>
 
-<style scoped></style>
+<style scoped lang="sass">
+
+</style>
