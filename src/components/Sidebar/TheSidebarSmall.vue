@@ -1,5 +1,5 @@
 <template>
-    <aside class="hidden md:block xl:hidden max-h-screen overflow-hidden fixed bg-white">
+    <aside class="max-h-screen overflow-hidden fixed bg-white"> 
       <section>
         <ul>
           <SidebarSmallItem label="Home" icon="homeIcon" isActive=""/>
@@ -16,4 +16,5 @@
 
 <script setup>
 import SidebarSmallItem from './SidebarSmallItem.vue';
+
 </script>
