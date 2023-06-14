@@ -1,5 +1,5 @@
 <template>
-  <section class="flex fixed bg-white w-screen md:ml-24 xl:ml-64 xs:top-14 z-20 pl-4">
+  <section :class="marginClasses" class="flex fixed bg-white w-screen xs:top-14 z-20 pl-4">
     <div class="max-w-screen-2xl m-auto">
       <div class="text-sm py-5 pl-4 bg-white flex space-x-3 overflow-auto whitespace-nowrap">
        <CategoryItem
@@ -12,6 +12,18 @@
 <script setup>
 
 import CategoryItem from './CategoryItem.vue';
+import { computed } from '@vue/reactivity';
+
+const props = defineProps({
+  sidebarState: String
+});
+
+const marginClasses = computed(() => {
+    return {
+        'ml-64': props.sidebarState === 'normal',
+        'ml-24': props.sidebarState === 'compact'
+    }
+});
 
 
 const categories = [

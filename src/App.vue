@@ -2,8 +2,8 @@
   <TheHeader @toggle-sidebar="toggleSidebar" />
   <TheSidebarSmall v-show="state.sidebarState === 'compact'" />
   <TheSidebarBig v-show="state.sidebarState === 'normal'" />
-  <TheCategory />
-  <TheVideoMain />
+  <TheCategory :sidebarState="state.sidebarState" :marginClasses="marginClasses"/>
+  <TheVideoMain :sidebarState="state.sidebarState" :mainClasses="mainClasses"/>
   <MobileMenu />
 </template>
 
@@ -14,8 +14,13 @@ import TheSidebarBig from './components/Sidebar/TheSidebarBig.vue';
 import TheCategory from './components/TheCategory.vue';
 import TheVideoMain from './components/TheVideoMain.vue';
 import MobileMenu from './components/Sidebar/MobileMenu.vue';
-import { reactive, } from 'vue';
+import { reactive, computed } from 'vue';
 import { useWindowSize } from '@vueuse/core'
+
+const props = defineProps({
+  mainClasses: {type: Object},
+  marginClasses: {type: Object}
+})
 
 const state = reactive({
   sidebarState: 'normal'
@@ -29,26 +34,11 @@ function toggleSidebar() {
   } else {
     state.sidebarState = 'compact'
   }
-  // if (width.value >= 1024) {
-  //   state.sidebarState = state.sidebarState === 'normal' ? 'compact' : 'normal'
-  // }
 }
 
 window.addEventListener('resize', toggleSidebar)
 
-const components = {
-  TheHeader,
-  TheSidebarSmall,
-  TheSidebarBig,
-  TheCategory,
-  TheVideoMain,
-  MobileMenu
 
-}
-
-
-
-defineExpose({ components })
 </script>
 
 <style scoped lang="sass">

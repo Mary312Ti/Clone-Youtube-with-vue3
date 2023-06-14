@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      
-    },
+export const content = [
+  "./index.html",
+  "./src/**/*.{vue,js,ts,jsx,tsx}",
+];
+export const theme = {
+  extend: {
+    // ...
   },
-  plugins: [],
-}
-
+};
+export const plugins = [
+  require('postcss-nested'),
+  // ... other plugins
+];
