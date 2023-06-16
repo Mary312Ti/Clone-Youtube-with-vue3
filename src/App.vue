@@ -4,7 +4,7 @@
   <TheSidebarBig v-show="state.sidebarState === 'normal'" />
   <TheCategory :sidebarState="state.sidebarState" :marginClasses="marginClasses"/>
   <TheVideoMain :sidebarState="state.sidebarState" :mainClasses="mainClasses"/>
-  <MobileMenu />
+  <MobileMenu  v-show="state.sidebarState === 'compact'" />
 </template>
 
 <script setup>
@@ -14,7 +14,7 @@ import TheSidebarBig from './components/Sidebar/TheSidebarBig.vue';
 import TheCategory from './components/TheCategory.vue';
 import TheVideoMain from './components/TheVideoMain.vue';
 import MobileMenu from './components/Sidebar/MobileMenu.vue';
-import { reactive, computed } from 'vue';
+import { reactive } from 'vue';
 import { useWindowSize } from '@vueuse/core'
 
 const props = defineProps({
