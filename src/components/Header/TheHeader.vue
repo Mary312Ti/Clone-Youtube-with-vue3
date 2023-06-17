@@ -23,9 +23,9 @@
                 </svg>
             </button>
             <!-- dots-menu -->
-            <button class="relative group p-2 focus:outline-none">
+            <button @click="isDropDownOpen = !isDropDownOpen" class="relative group p-2 focus:outline-none">
                 <BaseIcon name="dotsSettings" fill-color="none" stroke-color="currentColor"></BaseIcon>
-                <TheDropdown/>
+                <TheDropdown v-if="isDropDownOpen"/>
             </button>
             <LoginButton />
         </div>
@@ -38,7 +38,10 @@ import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
 import BaseIcon from '../Base/BaseIcon.vue';
 import { defineEmits } from 'vue';
+import { reactive, ref } from 'vue';
 
 defineEmits: ['toggleSidebar']
+
+const isDropDownOpen = ref(false);
 
 </script>

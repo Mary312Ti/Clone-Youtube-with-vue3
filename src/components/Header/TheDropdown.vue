@@ -1,6 +1,6 @@
 <template>
-    <div
-        class="z-50 visible opacity-0 group-hover:opacity-100 absolute top-9 -right-full sm:right-0 bg-white w-56 rounded-md">
+    <div 
+        class="z-50 visible absolute top-9 -right-full sm:right-0 bg-white w-56 rounded-md">
         <section class="py-2 border-b">
             <ul>
                 <dropdownList name="dataIcon" label="Your data in youtube">
@@ -34,5 +34,8 @@
 
 <script setup>
 import dropdownList from './dropdownList.vue';
+import { reactive } from 'vue';
+
+
 
 </script>
