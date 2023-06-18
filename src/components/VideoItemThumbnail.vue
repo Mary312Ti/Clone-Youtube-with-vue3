@@ -1,13 +1,7 @@
 <template>
     <div class="relative">
         <img class="rounded-lg hover:rounded-none" src="http://placekitten.com/720/404" />
-        <span
-            class="opacity-0 group-hover:opacity-100 bg-opacity-60 absolute top-0 right-0 bg-black text-white rounded-md m-1 p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                class="w-5 h-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        </span>
+        <VideoItemThumbnailButton />
         <span
             class="opacity-0 group-hover:opacity-100 bg-opacity-60 absolute top-8 right-0 bg-black text-white rounded-md m-1 p-1">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -22,7 +16,7 @@
 </template>
 
 <script setup>
-
+import VideoItemThumbnailButton from './VideoItemThumbnailButton.vue';
 
 
 </script>
