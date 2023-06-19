@@ -5,7 +5,10 @@ export const content = [
 ];
 export const theme = {
   extend: {
-    // ...
+    transitionProperty: {
+      'width':'width',
+      
+    }
   },
 };
 export const plugins = [
