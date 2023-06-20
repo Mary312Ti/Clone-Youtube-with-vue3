@@ -12,7 +12,7 @@ import TheHeader from './components/Header/TheHeader.vue';
 import TheSidebarSmall from './components/Sidebar/TheSidebarSmall.vue';
 import TheSidebarBig from './components/Sidebar/TheSidebarBig.vue';
 import TheCategory from './components/TheCategory.vue';
-import TheVideoMain from './components/TheVideoMain.vue';
+import TheVideoMain from './components/TheVideo/TheVideoMain.vue';
 import MobileMenu from './components/Sidebar/MobileMenu.vue';
 import { reactive } from 'vue';
 import { useWindowSize } from '@vueuse/core'

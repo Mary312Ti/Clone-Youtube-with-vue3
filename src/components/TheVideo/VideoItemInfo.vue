@@ -16,17 +16,13 @@
                 {{ viewCounts[index] }} &middot; {{ addingTime[index] }}
             </div>
         </div>
-        <button class="-mt-1 ml-auto p-1 text-gray-500 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd"
-                    d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                    clip-rule="evenodd" />
-            </svg>
-        </button>
+        <VideoItemDropdown/>
     </div>
 </template>
 
 <script setup>
+
+import VideoItemDropdown from './VideoItemDropdown.vue';
 
 const videoTitles = ['Video title 1', 'Video title 2','Video title 3', 'Video title 4', 'Video title 5', 'Video title 6', 'Video title 7', 'Video title 8','Video title 9','Video title 10','Video title 11', 'Video title 12', 'Video title 13', 'Video title 14', 'Video title 15', 'Video title 16']; // массив заголовков видео
 const channelNames = ['Channel name 1', 'Channel name 2','Channel name 3', 'Channel name 4', 'Channel name 5', 'Channel name 6', 'Channel name 7', 'Channel name 8', 'Channel name 9', 'Channel name 10', 'Channel name 11', 'Channel name 12', 'Channel name 13', 'Channel name 14', 'Channel name 16','Channel name 15']; // массив названий каналов
