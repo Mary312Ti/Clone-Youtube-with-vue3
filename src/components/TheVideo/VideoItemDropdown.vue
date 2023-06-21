@@ -3,7 +3,7 @@
         <button @click="toggleDropdown" class="-mt-1 ml-auto p-1 text-gray-500 focus:outline-none">
             <BaseIcon name="dotsSettings" fill-color="none" stroke-color="currentColor" class="w-6 h-6" />
         </button>
-        <div v-if="isDropdownOpen" @click="toggleDropdown" class="z-50 visible absolute top-9 -right-full sm:right-0 bg-white w-56 rounded-md">
+        <div v-if="isDropdownOpen" @click="toggleDropdown" class="shadow-md z-50 visible absolute top-9 -right-full sm:right-0 bg-white w-56 rounded-md">
             <section class="py-2">
                 <ul>
                     <dropdownList name="addToQueue" label="Add to queue" fill-color="currentColor" stroke-color="none">

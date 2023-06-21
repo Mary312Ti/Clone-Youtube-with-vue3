@@ -1,6 +1,7 @@
 <template>
-    <div class="flex items-start mt-3">
-        <img src="http://placekitten.com/40/40" class="mr-3 rounded-full w-9 h-9" alt="" />
+    <div class="flex items-start place-content-between mt-3">
+        <div class="flex">
+            <img src="http://placekitten.com/40/40" class="mr-3 rounded-full w-9 h-9" alt="" />
         <div class="text-sm">
             <span class="font-semibold text-gray-800">{{ videoTitles[index] }}</span>
             <div class="text-gray-600 mt-1 flex items-center flex-nowrap">
@@ -16,6 +17,8 @@
                 {{ viewCounts[index] }} &middot; {{ addingTime[index] }}
             </div>
         </div>
+        </div>
+        
         <VideoItemDropdown/>
     </div>
 </template>
