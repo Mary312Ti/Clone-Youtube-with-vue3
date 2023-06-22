@@ -4,7 +4,7 @@
         <span v-show="hover" 
             :class="badgeClasses">
             <span class="my-1.5 mx-3">
-                <!--Watch later--> {{ label }}
+            {{ label }}
             </span>
         </span>
     </span>
@@ -42,6 +42,8 @@ const badgeClasses = computed(() => {
         hover.value ? 'w-28' : 'w-0',
         'absolute',
         'transition-width',
+        'duration-300',
+        'ease-in-out',
         'bg-black',
         'bg-opacity-60',
         'whitespase-nowrap',

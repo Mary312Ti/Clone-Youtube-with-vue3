@@ -2,7 +2,7 @@
     <header class="flex justify-between bg-white sticky top-0 z-50">
         <div class="lg:w-1/4 xl:w-64 flex">
             <div class="flex items-center pl-4">
-                <button @click="$emit('toggleSidebar')" class="pl-2 pr-6 hidden sm:block"> 
+                <button @click="$emit('toggleSidebar')" class="pl-2 pr-6 hidden sm:block">
                     <BaseIcon name="menu" strokeColor="currentColor" fillColor="none"></BaseIcon>
                 </button>
                 <LogoMain />
@@ -10,9 +10,11 @@
         </div>
         <div class="hidden p-2.5 sm:flex flex-1 gap-2 justify-end pl-8 md:pl-12 md:px-8 lg:px-0 items-center lg:w-1/2">
             <TheSearch />
-            <button class="ml-4 hidden sm:flex focus:outline-none">
-                <BaseIcon name="microphone" strokeColor="none" fillColor="currentColor"></BaseIcon>
-            </button>
+            <BaseTooltipe text="Voice search">
+                <button class="ml-4 hidden sm:flex focus:outline-none">
+                    <BaseIcon name="microphone" strokeColor="none" fillColor="currentColor"></BaseIcon>
+                </button>
+            </BaseTooltipe>
         </div>
         <div class="mt-2 z-20 sm:m-0 sm:space-x-8 flex items-center justify-end lg:w-1/4 pr-4 px-4">
             <button class="sm:hidden px-6 py-2 text-gray-600">
@@ -23,10 +25,12 @@
                 </svg>
             </button>
             <!-- dots-menu -->
+            <BaseTooltipe text="Settings">
             <button @click="isDropDownOpen = !isDropDownOpen" class="relative group p-2 focus:outline-none">
                 <BaseIcon name="dotsSettings" fill-color="none" stroke-color="currentColor"></BaseIcon>
-                <TheDropdown v-if="isDropDownOpen"/>
+                <TheDropdown v-if="isDropDownOpen" />
             </button>
+        </BaseTooltipe>
             <LoginButton />
         </div>
     </header>
@@ -37,8 +41,9 @@ import LogoMain from './LogoMain.vue';
 import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
 import BaseIcon from '../Base/BaseIcon.vue';
+import BaseTooltipe from '../Base/BaseTooltipe.vue';
 import { defineEmits } from 'vue';
-import { reactive, ref } from 'vue';
+import { ref } from 'vue';
 
 defineEmits: ['toggleSidebar']
 
