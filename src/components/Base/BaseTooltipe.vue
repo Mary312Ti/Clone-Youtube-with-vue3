@@ -27,6 +27,7 @@ const toggleState = () => {
 
 const classes = computed(() => {
     return [
+        'z-20',
         'bg-gray-600',
         'bg-opacity-80',
         'rounded-md',
