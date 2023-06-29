@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-64 max-h-screen overflow-auto fixed"> <!--hidden xl:block-->
+    <aside class="w-64 max-h-screen overflow-auto fixed scrollbar scrollbar-thumb-gray-400 scrollbar-track-transparent hover:scrollbar-thumb-gray-500 hover:scrollbar-track-gray-100"> <!--hidden xl:block-->
     <SidebarSection>
       <SidebarNavItem label="Home" icon="homeIcon" fill-color="currentColor" stroke-color="none" is-active />
       <SidebarNavItem label="Shorts" icon="shortsIcon" />

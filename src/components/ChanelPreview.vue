@@ -1,6 +1,6 @@
 <template>
     <div
-      class="h-24 xl:h-56 bg-center bg-cover relative bg-[url(./assets/image/chanel-cover-min.jpg')]"
+      class="h-24 xl:h-56 bg-center bg-cover relative bg-[url('./assets/image/chanel-cover-min.jpg')]"
     >
       <div
         class="absolute bottom-9 right-0 bg-black bg-opacity-30 py-1 pl-2 rounded-l-full backdrop-blur-sm"

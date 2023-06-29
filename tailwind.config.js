@@ -12,5 +12,7 @@ export const theme = {
 };
 export const plugins = [
   require('postcss-nested'),
+  require('tailwind-scrollbar'),
+
   // ... other plugins
 ];

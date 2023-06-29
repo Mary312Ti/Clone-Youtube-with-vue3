@@ -1,7 +1,7 @@
 <template>
   <section :class="marginClasses" class="flex fixed bg-white w-screen xs:top-14 z-20 pl-4">
     <div class="max-w-screen-2xl m-auto">
-      <div class="text-sm py-5 pl-4 bg-white flex space-x-3 overflow-auto whitespace-nowrap">
+      <div class="scrollbar scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-thumb-rounded-full hover:scrollbar-thumb-gray-500 hover:scrollbar-track-gray-100 text-sm py-5 pl-4 bg-white flex space-x-3 overflow-auto whitespace-nowrap">
        <CategoryItem
        v-for="category in categories" :key="category" :category="category" :isActive="category === 'All'" />
       </div>
