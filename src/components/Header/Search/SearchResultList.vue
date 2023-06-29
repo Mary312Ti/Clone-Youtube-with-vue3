@@ -1,5 +1,5 @@
 <template>
-    <ul class="absolute top-12 rounded-lg drop-shadow-lg bg-white py-2">
+    <ul class="absolute top-12 rounded-lg drop-shadow-lg bg-white py-2 min-w-input">
         <li v-for="(result, index) in searchResult" :key="result" :class="listItemClasses(index)">
             <BaseIcon name="search" strokeColor="currentColor" fillColor="none" class="w-5 h-5"></BaseIcon>
             {{ result }}
@@ -27,3 +27,11 @@ const listItemClasses = (index) => {
 };
 
 </script>
+
+<style scoped>
+
+.min-w-input {
+  min-width: calc(100% - 2 * 0.75rem); /* Adjust the padding value if needed */
+}
+
+</style>

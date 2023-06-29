@@ -5,11 +5,11 @@
             <div class="text-sm">
                 <span class="font-semibold text-gray-800">{{ videoTitles[index] }}</span>
                 <BaseTooltipe :text="channelNames[index]">
-                    <div class="text-gray-600 mt-1 flex items-center flex-nowrap">
+                    <router-link to="/chanel" class="text-gray-600 mt-1 flex items-center flex-nowrap">
                         <span class="pr-[8px]">{{ channelNames[index] }}</span>
                         <BaseIcon name="confirmChanel" strokeColor="none" fillColor="currentColor"
                             class="w-4 h-4 opacity-50"></BaseIcon>
-                    </div>
+                    </router-link>
                 </BaseTooltipe>
                 <div class="text-gray-600">
                     {{ viewCounts[index] }} &middot; {{ addingTime[index] }}

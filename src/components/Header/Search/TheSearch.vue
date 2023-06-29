@@ -10,10 +10,4 @@
 import TheSearchInput from './TheSearchInput.vue';
 import TheSearchButton from './TheSearchButton.vue';
 
-const components = {
-    TheSearchInput,
-    TheSearchButton
-}
-
-defineExpose ({ components })
 </script>
