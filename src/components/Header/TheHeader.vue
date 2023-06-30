@@ -2,7 +2,7 @@
     <header class="flex justify-between bg-white sticky top-0 z-50">
         <div class="lg:w-1/4 xl:w-64 flex">
             <div class="flex items-center pl-4">
-                <button @click="$emit('toggleSidebar')" class="pl-2 pr-6 hidden sm:block">
+                <button @click="toggleSidebar" class="pl-2 pr-6 hidden sm:block">
                     <BaseIcon name="menu" strokeColor="currentColor" fillColor="none"></BaseIcon>
                 </button>
                 <LogoMain />
@@ -42,10 +42,16 @@ import TheSearch from './Search/TheSearch.vue';
 import LoginButton from '../Login/LoginButton.vue';
 import BaseIcon from '../Base/BaseIcon.vue';
 import BaseTooltipe from '../Base/BaseTooltipe.vue';
+import { useSidebarStore } from '../../stores/sidebarState';
 import { defineEmits } from 'vue';
 import { ref } from 'vue';
 
-defineEmits: ['toggleSidebar']
+const store = useSidebarStore();
+defineEmits(['toggleSidebar']);
+
+function toggleSidebar() {
+  store.toggleSidebar();
+}
 
 const isDropDownOpen = ref(false);
 

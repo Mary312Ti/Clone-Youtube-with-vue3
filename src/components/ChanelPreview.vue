@@ -1,6 +1,5 @@
 <template>
-    <div
-      class="h-24 xl:h-56 bg-center bg-cover relative bg-[url('./assets/image/chanel-cover-min.jpg')]"
+    <div :class="mainClasses" class="h-28 xl:h-60 bg-center bg-cover relative bg-[url('./assets/image/chanel-cover-min.jpg')]"
     >
       <div
         class="absolute bottom-9 right-0 bg-black bg-opacity-30 py-1 pl-2 rounded-l-full backdrop-blur-sm"
@@ -21,3 +20,15 @@
       </div>
     </div>
 </template>
+
+<script setup>
+import { computed } from 'vue';
+
+const mainClasses = computed(() => {
+    return {
+        'ml-64': props.sidebarState === 'normal',
+        'ml-24': props.sidebarState === 'compact'
+    }
+});
+
+</script>
