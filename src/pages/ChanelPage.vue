@@ -4,6 +4,7 @@
     <TheSidebarBig v-show="sidebarState === 'normal'" />
     <TheCategory :sidebarState="sidebarState" :marginClasses="marginClasses"/>
     <ChanelPreview :sidebarState="sidebarState" :mainClasses="mainClasses"/>
+    <TheChanelHead :sidebarState="sidebarState" :mainClasses="mainClasses"/>
 </template>
 
 <script setup>
@@ -12,6 +13,7 @@ import TheSidebarSmall from '../components/Sidebar/TheSidebarSmall.vue';
 import TheSidebarBig from '../components/Sidebar/TheSidebarBig.vue';
 import TheCategory from '../components/TheCategory.vue';
 import ChanelPreview from '../components/ChanelPreview.vue';
+import TheChanelHead from '../components/ChanelNavigation/TheChanelHead.vue';
 import { useWindowSize } from '@vueuse/core';
 import { useSidebarStore } from '../stores/sidebarState';
 import { computed, onMounted, onUnmounted } from 'vue';

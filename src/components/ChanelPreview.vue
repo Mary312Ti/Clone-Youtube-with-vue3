@@ -31,4 +31,8 @@ const mainClasses = computed(() => {
     }
 });
 
+const props = defineProps({
+  sidebarState: String,
+});
+
 </script>
