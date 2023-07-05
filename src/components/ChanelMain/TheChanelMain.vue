@@ -2,31 +2,7 @@
     <div :class="mainClasses" class="px-4">
         <div class="flex flex-col xl:flex-row py-6">
             <img src="/lorem-img1.jpg" alt="" class="xl:max-w-sm max-w-sm max-h-60 " />
-            <div class="xl:pl-6 max-w-md mt-3 xl:mt-0 flex flex-col justify-between items-start">
-                <div>
-                    <span class="text-semibold text-black text-sm">
-                        Video Title
-                    </span>
-                    <div class="text-xs mt-1 xl:my-4">438,648 views &middot; 4 months ago</div>
-                    <div class="text-sm text-gray-800 hidden xl:block">
-                        Welcome to our entertaining YouTube channel dedicated to the most
-                        adorable creatures on the internet - our beloved little feline
-                        friends! Here at our channel, we celebrate all things cat-related
-                        and bring you the most hilarious, heartwarming and awe-inspiring
-                        videos of our whiskered companions. Whether you're a
-                        self-confessed cat aficionado or simply love seeing cute and funny
-                        animal moments, our channel has it all. From mischievous kittens
-                        getting up to all sorts of antics, to brave cats taking on big
-                        dogs and heartwarming moments of cats and their adorable kittens,
-                        there's never a dull moment on our channel. So sit back, relax and
-                        prepare to be entertained by the cutest and funniest cats on the
-                        internet. Don't forget to hit that subscribe button and turn on
-                        notifications so you never miss a single video!
-                    </div>
-                    <a href="" class="uppercase font-semibold text-xs hover:text-black text-gray-600 hidden xl:inline">Read
-                        more</a>
-                </div>
-            </div>
+           <TheChanelDescr/>
         </div>
         <!-- section1-head -->
         <div class="border-t border-gray-300 pt-5">
@@ -266,20 +242,7 @@
         </div>
         <!-- section2-head -->
         <div class="border-t border-gray-300 pt-5">
-            <div class="flex items-center">
-                <a href="" class="font-semibold text-gray-800 mr-6 text-sm">Videos</a>
-                <a href="" class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#6b7280" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="none" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                    </svg>
-
-                    <span class="ml-2 font-semibold text-xs hover:text-black text-gray-600">
-                        Play all
-                    </span>
-                </a>
-            </div>
+            <PlaylistHead header="Main video"/>
             <!--section2-main-->
             <div class="pt-4 relative">
                 <a href=""
@@ -517,7 +480,7 @@
                             Subscribe
                         </button>
                     </a>
-                    <a href="#" class="w-full flex flex-col items-center ml-14 mr-14 hidden lg:inline">
+                    <a href="#" class="w-full flex-col items-center ml-14 mr-14 hidden lg:flex">
                         <img src="http://placekitten.com/100/100" alt="" class="rounded-full">
                         <span class="font-semibold mb-4 mt-2">
                             Channel-name
@@ -536,6 +499,8 @@
 </template>
 
 <script setup>
+import TheChanelDescr from '../ChanelMain/TheChanelDescr.vue';
+import PlaylistHead from './PlaylistHead.vue';
 import { computed } from 'vue';
 
 const mainClasses = computed(() => {

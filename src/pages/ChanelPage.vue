@@ -5,7 +5,7 @@
     <TheCategory :sidebarState="sidebarState" :marginClasses="marginClasses"/>
     <ChanelPreview :sidebarState="sidebarState" :mainClasses="mainClasses"/>
     <TheChanelHead :sidebarState="sidebarState" :mainClasses="mainClasses"/>
-    <TheChanelMain/>
+    <TheChanelMain :sidebarState="sidebarState" :mainClasses="mainClasses"/>
 </template>
 
 <script setup>
