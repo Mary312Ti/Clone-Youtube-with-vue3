@@ -2,7 +2,7 @@
     <div class="flex items-center">
         <a href="" class="font-semibold text-gray-800 mr-6 text-sm">{{ header }}</a>
         <a href="" class="flex items-center">
-            <BaseIcon name="playIcon" stroke-color="none" fill-color="currentColor"/>
+            <BaseIcon name="playIcon" stroke-color="none" fill-color="gray"/>
             <span class="ml-2 font-semibold text-xs hover:text-black text-gray-600">
                 Play all
             </span>

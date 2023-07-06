@@ -17,7 +17,7 @@ export const useSearchStore = defineStore("search", {
               part: "snippet",
               type: "video",
               maxResults: 5,
-              key: "AIzaSyBbJ8YBrUI0TYUc5qvuYJG8FxVcK2b6bFQ",
+              key: import.meta.env.VITE_API_KEY,
             },
           }
         );
