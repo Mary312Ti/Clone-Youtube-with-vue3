@@ -3,6 +3,7 @@ import ChanelPage from '../pages/ChanelPage.vue'
 import Home from '../pages/Home.vue'
 import SignIn from '../pages/SignIn.vue'
 import SignUp from '../pages/SignUp.vue'
+import PlayingPage from '../pages/PlayingPage.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/signup',
     name: 'SignUp',
     component: SignUp,
+  },
+  {
+    path: '/play',
+    name: 'PlayingPage',
+    component: PlayingPage,
   },
 ];
 
