@@ -16,6 +16,7 @@ import TheVideoMain from '../components/TheVideo/TheVideoMain.vue';
 import MobileMenu from '../components/Sidebar/MobileMenu.vue';
 import { useWindowSize } from '@vueuse/core';
 import { useSidebarStore } from '../stores/sidebarState';
+import { useVideoStore } from '../stores/previewVideoStore';
 import { onMounted, onUnmounted, computed } from 'vue';
 
 const props = defineProps({
@@ -28,6 +29,7 @@ const { width } = useWindowSize();
 
 onMounted(() => {
     window.addEventListener('resize', toggleSidebar);
+    videoStore.fetchRandomVideos(); // Fetch videos on component mount
 });
 
 onUnmounted(() => {
@@ -39,7 +41,7 @@ function toggleSidebar() {
 }
 
 const sidebarState = computed(() => store.sidebarState);
-
+const videoStore = useVideoStore();
 
 </script>
   
