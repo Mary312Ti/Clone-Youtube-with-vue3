@@ -1,9 +1,9 @@
 <template>
-    <div class="flex items-start place-content-between mt-3">
+    <div class="flex items-start place-content-between mt-3" v-if="video">
         <div class="flex">
-            <img v-if="showImage" :src="thumbnailUrl" class="mr-3 rounded-full w-9 h-9" alt="" />
+            <img v-if="showImage" :src="video.thumbnailUrl" class="mr-3 rounded-full w-9 h-9" alt="" />
             <div class="text-sm">
-                <span class="font-semibold text-gray-800">{{ video.title }}</span>
+                <span class="font-semibold text-gray-800 line-clamp-2 ...">{{ video.title }}</span>
                 <BaseTooltipe :text="video.channelName">
                     <router-link to="/chanel" v-if="showChannelLink"
                         class="text-gray-600 mt-1 flex items-center flex-nowrap">
@@ -13,7 +13,7 @@
                     </router-link>
                 </BaseTooltipe>
                 <div class="text-gray-600">
-                    {{ video.viewCount }} &middot; {{ video.publishedAt }}
+                    {{ video.viewCount }} &middot; {{ formattedAddingTime }}
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
 import VideoItemDropdown from './VideoItemDropdown.vue';
 import BaseIcon from '../Base/BaseIcon.vue';
 import BaseTooltipe from '../Base/BaseTooltipe.vue';
-import { computed, onMounted } from 'vue';
+import { computed, onMounted, defineProps } from 'vue';
 import { useVideoStore } from '../../stores/previewVideoStore';
 
 const props = defineProps({
@@ -55,10 +55,10 @@ const props = defineProps({
 const videoStore = useVideoStore();
 const index = props.index;
 const video = computed(() => videoStore.videos[index]);
-const thumbnailUrl = computed(() => videoStore.getThumbnailUrl(video.value));
+const formattedAddingTime = computed(() => videoStore.formatAddingTime(video.value));
 
 onMounted(() => {
-  videoStore.fetchRandomVideos();
+    videoStore.fetchRandomVideos();
 });
 </script>
   

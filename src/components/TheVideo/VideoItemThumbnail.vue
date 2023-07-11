@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <router-link to="/play"> <img class="rounded-lg hover:rounded-none" src="http://placekitten.com/720/404" /></router-link>
+        <router-link to="/play"> <img class="rounded-lg hover:rounded-none w-full h-auto" :src="video.thumbnailUrl" /></router-link>
         <VideoItemThumbnailButton name="historyIcon" label="Watch later"/>
         <VideoItemThumbnailButton name="addToQueue" label="Add to queue" class="top-8"/>
         <span
@@ -10,6 +10,15 @@
 
 <script setup>
 import VideoItemThumbnailButton from './VideoItemThumbnailButton.vue';
+import { computed, onMounted } from 'vue';
+import { useVideoStore } from '../../stores/previewVideoStore';
 
+const videoStore = useVideoStore();
+const video = computed(() => videoStore.videos[index]);
+const index = 0;
+
+onMounted(() => {
+  videoStore.fetchRandomVideos();
+});
 
 </script>
