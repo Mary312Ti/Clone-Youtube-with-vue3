@@ -27,7 +27,7 @@ const routes = [
     component: SignUp,
   },
   {
-    path: '/play',
+    path: '/play/:videoId',
     name: 'PlayingPage',
     component: PlayingPage,
   },

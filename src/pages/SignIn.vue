@@ -37,7 +37,7 @@ const loginUser = async (event) => {
 
   try {
     await authStore.login(username.value, password.value);
-    // Login successful, handle next steps
+    router.push('/'); // Redirect to the home page
   } catch (error) {
     // Login failed, handle error
   }
